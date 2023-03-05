@@ -52,6 +52,26 @@ export function $createCounters(attachTo: Save<HTMLElement>, counters: Array<Cou
 }
 ```
 
+Macro call:
+
+```ts
+$createCounters!(document.getElementById("counter-container")!, [
+  {
+    color: "transparent",
+    startCount: 0
+  }, 
+  {
+    color: "red",
+    startCount: 10
+  },
+  {
+    color: "pink",
+    startCount: 1000
+  }
+]);
+```
+
+
 If we build the app with `npm run build` and then inspect the JS file in `dist/assets`, we're going to find that there's no `$createCounters` function anywhere in the file! Instead we'll find this:
 
 ```js
