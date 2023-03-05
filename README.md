@@ -1,0 +1,1 @@
+# ts-macros-vite-example
